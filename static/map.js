@@ -172,13 +172,17 @@ map_pokestops = {} // Pokestops
 var gym_types = ["Uncontested", "Mystic", "Valor", "Instinct"];
 
 function setupPokemonMarker(item) {
+    var icon = {
+        url: 'static/icons/' + item.pokemon_id + '.png',
+        scaledSize: new google.maps.Size(48, 48)
+    };
     var marker = new google.maps.Marker({
         position: {
             lat: item.latitude,
             lng: item.longitude
         },
         map: map,
-        icon: 'static/icons/' + item.pokemon_id + '.png'
+        icon: icon
     });
 
     marker.infoWindow = new google.maps.InfoWindow({
