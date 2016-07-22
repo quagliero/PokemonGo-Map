@@ -146,7 +146,7 @@ var gym_types = ["Uncontested", "Mystic", "Valor", "Instinct"];
 function setupPokemonMarker(item) {
     var icon = {
         url: 'static/icons/pixelated/'+item.pokemon_id+'.png',
-        scaledSize: new google.maps.Size(60, 45)
+        scaledSize: new google.maps.Size(40, 30)
     };
     var marker = new google.maps.Marker({
         position: {
